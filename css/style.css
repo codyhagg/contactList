@@ -1,5 +1,5 @@
 body { 
-  background: url(../img/bgweb.jpg) no-repeat center center fixed; 
+  background: url(../img/bgweb2.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -79,14 +79,14 @@ b{
 }
 /* this is for the letter bars */
 .letter{
-    width:100%;
-    margin:3px 50px 3px 3px;
+    width:94.5%;
+    margin:3px 0px 3px 0px;
     padding:5px 10px;
     height: 1em;
     display: inline-block;
     font-size: 2em;
     text-transform:uppercase;
-    background-color: #bbb;
+    background-color: #aaa;
     color:#222;
 }
 /* each contact window */
@@ -95,9 +95,9 @@ b{
     border: 1px solid #aaa;
     width: 290px;
     height: 150px;
-    background-color: #eee;
+    background-color: #ddd;
     float: left;
-    margin: 9px;
+    margin: 5px 10px 5px 0;
     padding: 5px;
 }
 .contactContainer img {
@@ -117,23 +117,17 @@ b{
     border-bottom: dotted 1px #555; 
 
 }
-.edit{
-    border: 1px solid #555;
-    padding: 0px 25px;
-    cursor: pointer;
-    background-color: #bbb;
+.edit, .delete{
+    width: 70px;
+    padding: 7px 0px;
     position: absolute;
-    top: 93px;
-    left: 10px;
+    left: 15px;    
+}
+.edit{
+    top: 85px;
 }
 .delete{
-    border: 1px solid #555;
-    padding: 0px 17px;
-    cursor: pointer;
-    background-color: #bbb;
-    position: absolute;
-    top: 125px;
-    left: 10px;
+    top: 120px;
 }
 
 /* this is the form stuff */
@@ -183,8 +177,16 @@ b{
  
 #addContact button, #editContact  button {
     display:inline;
-    margin:0px 10px 10px 10px;
+    /*margin:0px 10px 10px 10px;*/
     clear: both;
+}
+#cancel{
+    float:left;
+    margin-left: 100px
+}
+#ok{
+    padding-left: 30px;
+    padding-right: 30px;
 }
  
 #addContact div, #editContact div {
