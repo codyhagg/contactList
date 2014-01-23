@@ -1,0 +1,204 @@
+body { 
+  background: url(../img/bgweb.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1{
+    text-align: center;
+    padding-top: 1em;
+    color: #fff;
+    
+}
+h3{
+    padding-top: .5em;
+}
+b{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#contactLogin{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width:320px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    background-color: #eee;
+}
+#contactLogin label{
+    width:60px;
+    margin-right:10px;
+    text-align:right;
+    line-height:25px;
+    display:inline-block;
+    margin:10px;
+}
+#contactLogin input{
+    display:inline-block;
+    margin-bottom:5px;    
+    width: 200px;
+}
+#contactLogin #submit{
+    display:inline;
+    float: right;
+    margin:0px 20px 10px 10px;
+    clear: both;
+}
+#failed{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width:400px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: #eee;
+    z-index: 10;
+    padding-top: 90px; 
+}
+#loginStatus, #loginStatus a{
+    color: #eee;
+}
+/* main container */
+#contacts{
+    margin: 0 auto;
+}
+#topContent{
+    text-align: center;
+    text-decoration: underline;
+    margin:0 auto;
+    color: #ccc;
+}
+/* this is for the letter bars */
+.letter{
+    width:100%;
+    margin:3px 50px 3px 3px;
+    padding:5px 10px;
+    height: 1em;
+    display: inline-block;
+    font-size: 2em;
+    text-transform:uppercase;
+    background-color: #bbb;
+    color:#222;
+}
+/* each contact window */
+.contactContainer {
+    position: relative;
+    border: 1px solid #aaa;
+    width: 290px;
+    height: 150px;
+    background-color: #eee;
+    float: left;
+    margin: 9px;
+    padding: 5px;
+}
+.contactContainer img {
+    float: left;
+    margin: 10px 10px;
+}
+.contactContainer ul {
+    list-style-type: none;
+    padding-top: 10px;
+    width:190px;
+    height:130px;
+    overflow:scroll;
+}
+.contactContainer ul li{
+    width:190px;
+    margin: 0;
+    border-bottom: dotted 1px #555; 
+
+}
+.edit{
+    border: 1px solid #555;
+    padding: 0px 25px;
+    cursor: pointer;
+    background-color: #bbb;
+    position: absolute;
+    top: 93px;
+    left: 10px;
+}
+.delete{
+    border: 1px solid #555;
+    padding: 0px 17px;
+    cursor: pointer;
+    background-color: #bbb;
+    position: absolute;
+    top: 125px;
+    left: 10px;
+}
+
+/* this is the form stuff */
+#lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport */
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.7);
+    text-align:center;
+    display: none;
+}
+#addContact, #editContact{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 260px;
+    margin: auto;
+    text-align: center;
+    background-color: #eee;
+    box-shadow:0 0 25px #111;
+    -webkit-box-shadow:0 0 25px #000;
+    -moz-box-shadow:0 0 25px #000;
+    display:none;
+    z-index: 10;
+}
+#addContact label, #editContact label{
+    width:60px;
+    margin-right:10px;
+    text-align:right;
+    line-height:25px;
+    display:inline-block;
+    margin-bottom:10px;
+    
+}
+ 
+ #addContact input, #editContact input{
+    display:inline-block;
+    margin-bottom:10px;
+    
+    width: 200px;
+}
+ 
+#addContact button, #editContact  button {
+    display:inline;
+    margin:0px 10px 10px 10px;
+    clear: both;
+}
+ 
+#addContact div, #editContact div {
+    width: 300px;
+    margin: 0 auto;
+}
+ 
+#addContact div:after, #editContact div:after {
+    content:"";
+    display:block;
+    height:0;
+    visibility:hidden;
+    clear:both;
+    font-size:0;
+    line-height:0;
+}
+
