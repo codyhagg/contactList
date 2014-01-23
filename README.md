@@ -20,7 +20,7 @@ Featuring:
 
 I haven't had a chance for any rigorous smoke testing but for a quick build I'm quite 
 happy with it. Please don't hesitate with input or feedback. Out of all the interviews
-I took Estenda is my top runner. I hope you like it.
+I took, Estenda is my top runner. I hope you like it.
 
 
 Regards,
