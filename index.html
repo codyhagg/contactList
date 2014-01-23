@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   </head>
@@ -26,8 +27,8 @@
           <label for="phone">phone: </label><input id="phone" type="text" />
           <label for="email">email: </label><input id="email" type="text" />
           <label for="notes">notes: </label><input id="notes" type="text" />
-          <button id="cancel">Cancel</button>
           <button id="ok">Ok</button>
+          <button id="cancel" >Cancel</button>
         </div>
       </form>    
   </div>
@@ -39,8 +40,8 @@
         <label for="phone">phone: </label><input id="phone" type="text" />
         <label for="email">email: </label><input id="email" type="text" />
         <label for="notes">notes: </label><input id="notes" type="text" />
-        <button id="cancel">Cancel</button>
         <button id="editOk">Ok</button>
+        <!-- <button id="editCancel">Cancel</button> -->
       </div>
     </form>    
     
@@ -54,8 +55,8 @@
             <li> &#9993; : <%= email%></li>
             <li>&#9998; : <%= notes%></li>
         </ul>
-        <div class="delete">Delete</div>
-        <div class="edit">Edit</div>
+        <button class="delete">Delete</button>
+        <button class="edit">Edit</button>
     </script>
     
     <script src="js/jquery.js"></script>

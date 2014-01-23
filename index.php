@@ -1,21 +1,20 @@
 <?php
 session_start();
-
-$userinfo = array(
-                'i'=>'i',
+$user = array(
+                'j'=>'j',
                 'estenda'=>'123'
                 );
-
+//
 if(isset($_GET['logout'])) {
     $_SESSION['username'] = '';
     header('Location:  ' . $_SERVER['PHP_SELF']);
 }
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
-    if($userinfo[$_POST['username']] == $userinfo[$_POST['password']]) {
+    if($user[$_POST['username']] && in_array($_POST['password'], $user)) {
         $_SESSION['username'] = $_POST['username'];
     }else {
-        print("<div id='failed'><b>You shall not pass!</b><br />username: estenda<br> password: 123<br> <a href='http://codyhagg.com/estenda/index.php'>try again</a></div>");
+        print("<div id='failed'><h3>You shall not pass!</h3><br />username: estenda<br> password: 123<br> <a href='http://codyhagg.com/estenda/index.php'>try again</a></div>");
     }
 }
 ?>
@@ -26,6 +25,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   </head>
@@ -62,8 +62,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
           <label for="phone">phone: </label><input id="phone" type="text" />
           <label for="email">email: </label><input id="email" type="text" />
           <label for="notes">notes: </label><input id="notes" type="text" />
-          <button id="cancel">Cancel</button>
           <button id="ok">Ok</button>
+          <button id="cancel">Cancel</button>
         </div>
       </form>    
     </div>
@@ -75,8 +75,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
         <label for="phone">phone: </label><input id="phone" type="text" />
         <label for="email">email: </label><input id="email" type="text" />
         <label for="notes">notes: </label><input id="notes" type="text" />
-        <button id="cancel">Cancel</button>
         <button id="editOk">Ok</button>
+        <button id="cancel">Cancel</button>
       </div>
     </form>    
 
@@ -90,8 +90,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             <li> &#9993; : <%= email%></li>
             <li>&#9998; : <%= notes%></li>
         </ul>
-        <div class="delete">Delete</div>
-        <div class="edit">Edit</div>
+        <button class="delete">Delete</button>
+        
     </script>
     
     <script src="js/jquery.js"></script>
@@ -103,8 +103,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     $( document ).ready(function() {
         $('#contactLogin').remove();        
     });
-        <?php endif; ?>
     </script>
+        <?php endif; ?>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
