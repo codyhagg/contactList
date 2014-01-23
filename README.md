@@ -21,6 +21,6 @@ happy with it. Please don't hesitate with input or feedback. Out of all the inte
 I took Estenda is my top runner. I hope you like it.
 Regards,
 Cody Hagg
- ##USERNAME: estenda
- ##PASSWORD: 123
+##USERNAME: estenda
+##PASSWORD: 123
 - if you want to run it locally without the PHP login there is an index.html file
