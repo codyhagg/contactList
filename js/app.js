@@ -28,7 +28,7 @@
     "phone":"123-456-7890",
     "email":"sal@khan.edu",
     "image":"img/sal.jpg",
-    "notes":""
+    "notes":"ol' sal"
   },
   {
     "name":"Sir Tony",

@@ -91,7 +91,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             <li>&#9998; : <%= notes%></li>
         </ul>
         <button class="delete">Delete</button>
-        
+        <button class="edit">Edit</button>
     </script>
     
     <script src="js/jquery.js"></script>
