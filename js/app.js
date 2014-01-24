@@ -65,6 +65,7 @@
     var Contacts = Backbone.Collection.extend({
        model:Contact
     });
+    var peeps = new Contacts();
 //                                                     _           
 //  ___  ___  ___   ___  ___ _______ ___  ___    _  __(_)__ _    __
 // / _ \/ _ \/ -_) / _ \/ -_) __(_-</ _ \/ _ \  | |/ / / -_) |/|/ /
@@ -115,11 +116,8 @@
                     formData[el.id] = $(el).val();
                 }
             });
-            console.log(formData)
-            this.model.set(formData)
-            // localStorage.setItem("contacts", JSON.stringify(contacts));
-            contactsView.sortPeople();
-
+            this.model.set(formData);
+            contactsView.sortPeople()
         }
     });
 //               _             _           
@@ -147,6 +145,7 @@
             // from collection
             this.collection.on("add", this.sortPeople, this);
             this.collection.on("remove", this.removeContact, this);
+            // this.collection.on("change", this.sortPeople, this);
             // listener for add button. not worth new view. 
             $('#add').on('click', function () {
                 $('input').val('')
@@ -157,6 +156,7 @@
             var that = this;
             // this.collection = new Contacts(contacts);
             var people = this.collection.models;
+                console.log('SORT: ', people);
             var compare = function(a, b) {
                 // this function will compare two people objects.
                 return a.attributes.name.localeCompare(b.attributes.name);
@@ -185,6 +185,7 @@
              $('#contacts').append('<p class="letter">'+ key +'</p>');
                 that.render(value);
             });
+          this.updateDatabase(people)
         },
         render: function(value){
             var that = this;
@@ -198,7 +199,7 @@
                 model: item
             });
             this.$el.append(contactView.render().el);
-            
+
         },
         // fires on add model "ok" button
         addContact: function(event){
@@ -215,7 +216,7 @@
             contacts.push(formData);
             // add to our collection
             this.collection.add(new Contact(formData));
-            localStorage.setItem("contacts", JSON.stringify(contacts));
+            this.updateDatabase(contacts);
         },
         // fires on any remove event
         removeContact: function(removedContact){
@@ -233,11 +234,15 @@
                     contacts.splice(_.indexOf(contacts, contact), 1);
                 }
             });
-            localStorage.setItem("contacts", JSON.stringify(contacts));
+            this.updateDatabase(contacts);
         },
         // fires on "cancel" click in pop up
         cancel:function () {
             $('#lightbox, #addContact').fadeOut('fast');
+        },
+        updateDatabase:function (what) {
+            localStorage.setItem("contacts", JSON.stringify(what));
+            console.log('updateDatabase: ',contacts);
         }
     });
 
