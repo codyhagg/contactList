@@ -6,8 +6,6 @@ USERNAME: estenda
 
 PASSWORD: 123
 
-Project Setup
-
 It is built using:
 - _Backbone_
 - _Underscore_
@@ -22,4 +20,3 @@ Featuring:
 
 
 
-- if you want to run it locally without the PHP login there is an index.html file
