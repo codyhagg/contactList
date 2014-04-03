@@ -1,9 +1,13 @@
 Contact app
 
 This is a simple contact list manager
+
 USERNAME: estenda
+
 PASSWORD: 123
+
 Project Setup
+
 It is built using:
 - _Backbone_
 - _Underscore_
